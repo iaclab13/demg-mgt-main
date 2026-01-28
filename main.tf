@@ -20,6 +20,7 @@ module "virtual_network" {
 }
 
 module "virtual_machine" {
+  count   = var.virtual_machine_create ? 1 : 0
   source  = "Azure/avm-res-compute-virtualmachine/azurerm"
   version = "0.18.1"
 
