@@ -8,6 +8,11 @@ variable "resource_group_create" {
   default = false
 }
 
+variable "vm_create" {
+  type    = bool
+  default = false
+}
+
 variable "location" {
   type        = string
   description = "The location/region where the resources will be created. Must be in the short form (e.g. 'uksouth')"
@@ -86,3 +91,4 @@ variable "virtual_machine_sku" {
 variable "tags" {
   type = map(string)
 }
+
